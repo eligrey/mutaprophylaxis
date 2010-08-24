@@ -1,10 +1,22 @@
 Mutaprophylaxis
 ===============
 
-*Version 0.1*
+Mutaprophylaxis ([IPA][1]: /ˌmjutʌproʊfɪˈlæksɪs/) is a JavaScript library that implements
+methods to prevent unauthorized DOM mutations.
 
-Mutaprophylaxis ([IPA][1]: /ˌmjutʌproʊfɪˈlæksɪs/) is a JavaScript library that implements methods to prevent unauthorized
-DOM mutations.
+
+Getting Started
+---------------
+
+* [Download Mutaprophylaxis][2].
+* Include Mutaprophylaxis in your webpage with
+  `<script type="application/javascript" src="mutaprophylaxis.js"></script>`.
+* Call `MutationEvent.protect(node)` on nodes that you wish to protect from mutations.
+  
+  It is recommended that you do this immediately after the node you wish to protect is
+  in the DOM, by placing a script directly after the node. If you wait for `onload` or
+  `DOMContentLoaded`, it may already be too late to protect the node, as malicious scripts
+  or add-ons may have already gotten to it.
 
 
 Usage
@@ -28,6 +40,15 @@ Tested Browsers
 Note that Internet Explorer 9 Platform Preview #4 partially supports DOM Level 3 mutation
 events, though it is still missing important parts of the specification used in
 Mutaprophylaxis.
+
+
+Enhanced Security Edition
+-------------------------
+
+Mutaprophylaxis Enhanced Security Edition (ESE) is a version of Mutaprophylaxis that is
+impossible to circumvent. [Download Mutaprophylaxis ESE][3] and follow the instructions in
+the file, if you want extra security.
+
 
 API
 ---
@@ -73,4 +94,6 @@ comments.addEventListener("DOMCharacterDataModified", function (event) {
 ![Tracking image](//in.getclicky.com/212712ns.gif =1x1)
 
 
-  [1]: http://en.wikipedia.org/wiki/IPA_chart_for_English_dialects
+  [1]: http://en.wikipedia.org/wiki/IPA_chart_for_English_dialects "International Phonetic Alphabet"
+  [2]: http://github.com/eligrey/mutaprophylaxis/raw/master/mutaprophylaxis.js "mutaprophylaxis.js"
+  [3]: http://github.com/eligrey/mutaprophylaxis/raw/master/mutaprophylaxis-ese.js "mutaprophylaxis-ese.js"

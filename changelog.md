@@ -4,6 +4,13 @@
 2010-08-24T16:52
 ----------------
 
+* Added test suites.
+* Fixed another incorrect `setAttributeNodeNS` usage.
+* Upped version numbers to `0.2.1`.
+
+2010-08-24T16:52
+----------------
+
 * Fixed incorrect `setAttributeNodeNS` usage.
 * Upped version numbers to `0.2`.
 

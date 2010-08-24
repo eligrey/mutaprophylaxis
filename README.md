@@ -25,22 +25,22 @@ Usage
 Mutaprophylaxis is intended for protecting nodes from DOM mutations triggered by malicious
 scripts and browser add-ons that interact with websites. To be honest, I predict that the
 main use of Mutaprophylaxis will be being used in combination with inline
-`display: block !important` styles to create ad blocker-blocking ads. Go ahead and use
-Mutaprophylaxis to make unblockable ads if you wish, however gray hat it may be.
+`display: block !important` styles to create ad blocker-blocking ads.
 
+Tested Compatible Browsers
+--------------------------
 
-Tested Browsers
----------------
+* Firefox 3.6
+* †Safari 5
+* †Google Chrome 5
+* Opera 10.60
+* ‡Internet Explorer 9 Platform Preview #4
 
-* Firefox 3.6+
-* Safari 5+
-* Google Chrome 5+
-* Opera 10.60+
-* (Partial support) Internet Explorer 9 Platform Preview #4
+† WebKit doesn't support the `DOMAttrModified` event or mutation events on nodes not
+  currently in a document.
 
-Note that Internet Explorer 9 Platform Preview #4 partially supports DOM Level 3 mutation
-events, though it is still missing important parts of the specification used in
-Mutaprophylaxis for reverting node insertions and deletions.
+‡ Internet Explorer 9 Platform Preview #4 only supports reverting
+`DOMCharacterDataModified` events.
 
 
 Enhanced Security Edition
@@ -48,7 +48,9 @@ Enhanced Security Edition
 
 Mutaprophylaxis Enhanced Security Edition (ESE) is a version of Mutaprophylaxis that is
 impossible to circumvent. [Download Mutaprophylaxis ESE][3] and follow the instructions in
-the file, if you want extra security.
+the file, if you want extra security. Make sure to only include the ESE script directly
+after the nodes you wish to protect, so you can reference the nodes in your code right
+away.
 
 
 API
@@ -73,9 +75,9 @@ authorizedMutator(function () {
 
   <dt><code><strong title="MutationEvent">event</strong>.<strong title="void">revert</strong>()</code></dt>
   <dd>
-    Attempts to revert a MutationEvent. Note that a MutationEvent cannot be reverted
-    during an the execution of a MutationEvent event listener, so you should call it in
-    a zero-timeout. For example, refer to the following example code.
+    Attempts to revert a MutationEvent. Note that a <code>MutationEvent</code> cannot be
+    reverted during an the execution of a MutationEvent event listener, so you should call
+    it in a zero-timeout. For example, refer to the following example code.
 <pre><code>var allowMutations = false;
 comments.addEventListener("DOMCharacterDataModified", function (event) {
     if (!allowMutations) {
@@ -86,8 +88,8 @@ comments.addEventListener("DOMCharacterDataModified", function (event) {
         }, 0);
     }
 }, false);</code></pre>
-    Also note that generic DOMSubtreeModified events cannot be reverted, as they do not
-	contain enough relevant information needed for reverting the event.
+    Also note that generic <code>DOMSubtreeModified</code> events cannot be reverted, as
+    they do not contain enough relevant information needed for reverting the event.
   </dd>
 </dl>
 

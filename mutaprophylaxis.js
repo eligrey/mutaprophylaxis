@@ -1,5 +1,5 @@
 /*
- * Mutaprophylaxis JavaScript Library v0.2
+ * Mutaprophylaxis JavaScript Library v0.2.1
  * Implements methods to prevent unauthorized DOM mutations.
  *
  * 2010-08-24
@@ -31,7 +31,7 @@ var
 					timeouts.shift()();
 				}
 			}
-	  }
+	}
 ;
 
 view.addEventListener("message", dispatchTimeouts, false);
@@ -53,7 +53,7 @@ MutationEvent.prototype.revert = function () {
 		case "DOMNodeRemoved":
 		case "DOMNodeRemovedFromDocument":
 			if (target.nodeType === target.ATTRIBUTE_NODE) {
-				relatedNode.setAttributeNodeNS(target.namespaceURI, target);
+				relatedNode.setAttributeNodeNS(target);
 			} else {
 				relatedNode.appendChild(target);
 				// It's impossible to know the order position of the removed node in
@@ -114,7 +114,7 @@ MutationEvent.protect = function (node) {
 				});
 				view.postMessage(timeoutKey, "*");
 			}
-		  }
+		}
 	;
 	while (i--) {
 		node.addEventListener(revertable[i], revert, false);

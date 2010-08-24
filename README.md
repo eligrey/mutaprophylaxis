@@ -3,7 +3,7 @@ Mutaprophylaxis
 
 *Version 0.1*
 
-Mutaprophylaxis is a JavaScript library that implements methods to prevent unauthorized
+Mutaprophylaxis ([IPA][1]: /ˌmjuːtʌproʊfaɪˈlæksɪs/) is a JavaScript library that implements methods to prevent unauthorized
 DOM mutations.
 
 
@@ -71,3 +71,6 @@ comments.addEventListener("DOMCharacterDataModified", function (event) {
 
 
 ![Tracking image](//in.getclicky.com/212712ns.gif =1x1)
+
+
+  [1]: http://en.wikipedia.org/wiki/IPA_chart_for_English_dialects

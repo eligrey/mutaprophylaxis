@@ -36,10 +36,11 @@ Tested Browsers
 * Safari 5+
 * Google Chrome 5+
 * Opera 10.60+
+* (Partial support) Internet Explorer 9 Platform Preview #4
 
 Note that Internet Explorer 9 Platform Preview #4 partially supports DOM Level 3 mutation
 events, though it is still missing important parts of the specification used in
-Mutaprophylaxis.
+Mutaprophylaxis for reverting node insertions and deletions.
 
 
 Enhanced Security Edition

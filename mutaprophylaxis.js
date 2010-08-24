@@ -1,8 +1,8 @@
 /*
- * Mutaprophylaxis JavaScript Library v0.1
+ * Mutaprophylaxis JavaScript Library v0.2
  * Implements methods to prevent unauthorized DOM mutations.
  *
- * 2010-08-23
+ * 2010-08-24
  * 
  * By Eli Grey, http://eligrey.com
  *
@@ -78,7 +78,7 @@ MutationEvent.prototype.revert = function () {
 					target.removeAttributeNode(relatedNode);
 					break;
 				case evt.REMOVAL:
-					target.setAttributeNodeNS(relatedNode.namespaceURI, relatedNode);
+					target.setAttributeNodeNS(relatedNode);
 					break;
 			}
 			break;

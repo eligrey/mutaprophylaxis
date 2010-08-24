@@ -1,5 +1,5 @@
 /*
- * Mutaprophylaxis JavaScript Library, Enhanced Security Edition v0.1
+ * Mutaprophylaxis JavaScript Library, Enhanced Security Edition v0.2
  * Implements methods to prevent unauthorized DOM mutations.
  *
  * 2010-08-24
@@ -76,7 +76,7 @@ var
 						target.removeAttributeNode(relatedNode);
 						break;
 					case 3: // REMOVAL
-						target.setAttributeNodeNS(relatedNode.namespaceURI, relatedNode);
+						target.setAttributeNodeNS(relatedNode);
 						break;
 				}
 				break;

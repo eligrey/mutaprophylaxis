@@ -1,8 +1,8 @@
-Mutaprophylaxis is dual-licensed under the GNU GPL v3 and the MIT/X11 license.
+Mutaprophylaxis is dual-licensed under the GNU GPL v3 and the MIT license.
 
 
-MIT/X11 license
----------------
+MIT license
+-----------
 
 Copyright &copy; 2010 [Elijah Grey]
 

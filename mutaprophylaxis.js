@@ -6,7 +6,7 @@
  * 
  * By Eli Grey, http://eligrey.com
  *
- * License: GNU GPL v3 and the X11/MIT license
+ * License: GNU GPL v3 and the MIT license
  *   See COPYING.md
  */
 
